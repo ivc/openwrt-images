@@ -16,6 +16,7 @@ openwrt_image(
         "block-mount",
         "collectd-mod-network",
         "collectd-mod-thermal",
+        "dnsmasq-full",
         "dockerd",
         "kmod-ipvlan",
         "kmod-macvlan",
