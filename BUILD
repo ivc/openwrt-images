@@ -20,6 +20,7 @@ openwrt_image(
         "dockerd",
         "kmod-ipvlan",
         "kmod-macvlan",
+ 	"kmod-usb-net-asix-ax88179",
         "luci",
         "luci-app-dockerman",
         "luci-app-firewall",
