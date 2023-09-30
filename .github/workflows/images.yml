@@ -1,0 +1,42 @@
+name: images
+
+on:
+  push:
+    paths:
+    - "images.json"
+
+jobs:
+  get-images:
+    runs-on: ubuntu-latest
+    outputs:
+      json: ${{ steps.get-images.outputs.json }}
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3.5.3
+    - id: get-images
+      run: |
+        (
+          echo "json<<EOF"
+          jq '[.[] | .packages|=join(" ") ]' < images.json
+          echo "EOF"
+        ) > "$GITHUB_OUTPUT"
+
+  build:
+    needs: get-images    
+    strategy:
+      matrix:
+        version: ${{ fromJson(needs.get-images.outputs.json) }}
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ivc/openwrt-builder:${{ matrix.version.builder }}
+    permissions:
+      contents: read
+    steps:
+    - run: |
+        mkdir -p /tmp/out
+        cd /home/builder
+        make image PROFILE=${{ matrix.version.profile }} PACKAGES="${{ matrix.version.packages }}" ${{ matrix.version.args}} BIN_DIR=/tmp/out
+    - name: upload
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        path: /tmp/out/*

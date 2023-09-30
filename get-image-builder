@@ -1,0 +1,6 @@
+#!/bin/bash
+URL=$1; shift
+SHA256=$1; shift
+
+set -e
+curl -sSL "$URL" | tee >(tar "$@") | sha256sum -c <(echo "$SHA256 -")

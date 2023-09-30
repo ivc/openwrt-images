@@ -1,0 +1,30 @@
+[
+    {
+        "builder": "22.03.5-bcm2711",
+        "profile": "rpi-4",
+        "packages": [
+            "-dnsmasq",
+            "block-mount",
+            "collectd-mod-network",
+            "collectd-mod-thermal",
+            "dnsmasq-full",
+            "dockerd",
+            "kmod-ipvlan",
+            "kmod-macvlan",
+            "kmod-usb-net-asix-ax88179",
+            "luci-app-dockerman",
+            "luci-app-firewall",
+            "luci-app-mwan3",
+            "luci-app-opkg",
+            "luci-app-statistics",
+            "luci-app-unbound",
+            "luci-app-wireguard",
+            "luci-mod-admin-full",
+            "luci-mod-network",
+            "luci-mod-status",
+            "luci-mod-system",
+            "luci"
+        ],
+        "args": "ROOTFS_PARTSIZE=1024"
+    }
+]
