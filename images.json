@@ -3,6 +3,12 @@
         "builder": "22.03.5-bcm2711",
         "profile": "rpi-4",
         "packages": [
+	    "ebtables-nft",
+	    "ip6tables-nft",
+	    "iptables-nft",
+	    "kmod-nft-bridge",
+	    "kmod-nft-compat",
+	    "luci-app-nlbwmon",
             "-dnsmasq",
             "block-mount",
             "collectd-mod-network",
@@ -10,8 +16,8 @@
             "dnsmasq-full",
             "kmod-macvlan",
             "kmod-usb-net-asix-ax88179",
+            "luci",
             "luci-app-firewall",
-	    "luci-app-nlbwmon",
             "luci-app-mwan3",
             "luci-app-opkg",
             "luci-app-statistics",
@@ -22,7 +28,6 @@
             "luci-mod-status",
             "luci-mod-system",
             "luci-ssl",
-            "luci",
             "unbound-control"
         ],
         "args": "ROOTFS_PARTSIZE=1024"
