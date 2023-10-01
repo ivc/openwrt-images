@@ -23,7 +23,9 @@
             "luci-mod-network",
             "luci-mod-status",
             "luci-mod-system",
-            "luci"
+            "luci-ssl",
+            "luci",
+            "unbound-control"
         ],
         "args": "ROOTFS_PARTSIZE=1024"
     }
