@@ -34,10 +34,10 @@ jobs:
     steps:
     - run: |
         mkdir -p /tmp/out
-        cd /home/builder
+        cd /builder
         make image PROFILE=${{ matrix.version.profile }} PACKAGES="${{ matrix.version.packages }}" ${{ matrix.version.args}} BIN_DIR=/tmp/out
     - name: upload
       uses: actions/upload-artifact@v3.1.2
       with:
-        name: images-${{ matrix.version.builder }}-${{ matrix.version.profile }}
+        name: ${{ matrix.version.name }}
         path: /tmp/out/*
