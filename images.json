@@ -1,7 +1,7 @@
 [
     {
-        "name": "raspberrypi4-bcm2711-22.03.5",
-        "builder": "docker.io/openwrt/imagebuilder:bcm27xx-bcm2711-22.03.5",
+        "name": "raspberrypi4-bcm2711-23.05-rc3",
+        "builder": "docker.io/openwrt/imagebuilder:bcm27xx-bcm2711-23.05.0-rc3",
         "profile": "rpi-4",
         "packages": [
             "-dnsmasq",
@@ -14,7 +14,6 @@
             "ip6tables-nft",
             "iptables-nft",
             "kmod-hwmon-raspberrypi",
-            "kmod-hwmon-rpi-poe-fan",
             "kmod-macvlan",
             "kmod-nft-bridge",
             "kmod-nft-compat",
