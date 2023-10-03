@@ -28,7 +28,7 @@ jobs:
         version: ${{ fromJson(needs.get-images.outputs.json) }}
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ivc/openwrt-builder:${{ matrix.version.builder }}
+      image: ${{ matrix.version.builder }}
     permissions:
       contents: read
     steps:

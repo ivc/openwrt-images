@@ -1,6 +1,6 @@
 [
     {
-        "builder": "22.03.5-bcm2711",
+        "builder": "docker.io/openwrt/imagebuilder:bcm27xx-bcm2711-22.03.5",
         "profile": "rpi-4",
         "packages": [
 	    "ebtables-nft",
