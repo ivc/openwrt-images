@@ -1,7 +1,7 @@
 [
   {
     "name": "raspberrypi4-bcm2711-23.05",
-    "builder": "docker.io/openwrt/imagebuilder:bcm27xx-bcm2711-23.05.2",
+    "builder": "docker.io/openwrt/imagebuilder:bcm27xx-bcm2711-23.05.3",
     "profile": "rpi-4",
     "packages": [
       "-dnsmasq",
@@ -37,7 +37,7 @@
   },
   {
     "name": "unifi6lr.v2-mt7622-23.05",
-    "builder": "docker.io/openwrt/imagebuilder:mediatek-mt7622-23.05.2",
+    "builder": "docker.io/openwrt/imagebuilder:mediatek-mt7622-23.05.3",
     "profile": "ubnt_unifi-6-lr-v2",
     "packages": [
       "collectd-mod-network",
